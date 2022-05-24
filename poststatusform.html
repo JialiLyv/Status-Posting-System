@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.labelField{
+    display:inline-block;
+    width:150px;
+    text-align: left;
+}
+.inputField{
+    display:inline-block;
+}
+
+.section{
+	margin: 20px 0 0 0
+}
+
+.button {
+    border-radius: 18px;
+    -moz-border-radius: 5px;
+}
+</style>
+</head>
+<body>
+
+<h1>Staus Posting System</h1>
+
+<form action="poststatusprocess.php" method = "post">
+    <div class="labelField">
+        Status Code(required):
+    </div>
+    <div class="inputField">
+        <input type="text" name ="statuscode" placeholder="e.g. S0001"/>
+    </div>
+    <br><br>
+    <div class="labelField">
+        Status(required): 
+    </div>
+    <div class="inputField">
+        <input type="text" id = "status" name ="status" placeholder="Input your status"/>
+    </div>
+    
+    <div class = "section">
+        <div class="labelField">
+            Share:
+        </div>
+        <input type="radio" id="public" name="share_to" value=0>
+        <label for="public">Public</label>
+        <input type="radio" id="friends" name="share_to" value=1>
+        <label for="friends">Friends</label>
+        <input type="radio" id="onlyme" name="share_to" value=2>
+        <label for="onlyme">Only Me</label> 
+        <br>
+        <div class="labelField">
+        	Date:
+        </div>
+        <input type="text" id = "date" name = "date" placeholder="dd/mm/yyyy">
+        <div>
+            <div class="labelField">
+                Permission Type:
+            </div>
+            <input type = "checkbox" id = "allow_like" name = "permission_type" value = 0>
+            <label for = "allow_like">Allow Like</label>
+            <input type = "checkbox" id = "allow_comment" name = "permission_type" value = 1>
+            <label for = "allow_comment">Allow Comment</label>
+            <input type = "checkbox" id = "allow_share" name = "permission_type" value = 2>
+            <label for = "allow_share">Allow Share</label>
+        </div>
+		<div class = "section">
+            <input class="button" type="submit" value="Post">    
+            <input class="button" type="reset" value = "Reset">
+        </div>
+   		<div class = "section">
+            <a href = "index.html">Return to Home Page</a>
+        </div>
+    </div>
+</form>
+</body>
+</html>
